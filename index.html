@@ -1,87 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Student Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title> student.name  - Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>student Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1> student.name </h1>
+    <h3> student.degree </h3>
+    <p> student.about </p>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="" alt="D.bharath" width="150" />
-        <p>Hello! I'm John Doe, a Computer Science student passionate about web development and design.</p>
-    </section>
+    <h2>Skills</h2>
+    <ul>
+    for skill in student.skills 
+        <li>{{ skill }}</li>
+    endfor 
+    </ul>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>react</li>
-            <li>Python</li>
-            <li>SQL</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>student Portfolio</td>
-                    <td>student portfolio showcasing skills and projects.</td>
-                    <td><a href="https://github.com/bharathD2006/Bharath.git" target="_blank">GitHub</a></td>
-                </tr>
-                <tr>
-                    <td>Todo App</td>
-                    <td>A simple todo list application built with React.</td>
-                    <td><a href="https://github.com/johndoe/todo-app" target="_blank">GitHub</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm" action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required /><br />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required /><br />
-
-            <label for="message">Message:</label><br />
-            <textarea id="message" name="message" rows="5" required></textarea><br />
-
-            <input type="submit" value="Send" />
-        </form>
-        <p id="formMessage"></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 bharath</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <h2>Projects</h2>
+    <ul>
+     for project in student.projects 
+        <li>
+            <strong>project.title:</strong> {{ project.description }}
+        </li>
+    endfor 
+    </ul>
 </body>
 </html>
-<!-- \ -->
