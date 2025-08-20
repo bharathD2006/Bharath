@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> student.name  - Portfolio</title>
+</head>
+<body>
+    <h1> student.name </h1>
+    <h3> student.degree </h3>
+    <p> student.about </p>
+
+    <h2>Skills</h2>
+    <ul>
+    for skill in student.skills 
+        <li>{{ skill }}</li>
+    endfor 
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+     for project in student.projects 
+        <li>
+            <strong>project.title:</strong> {{ project.description }}
+        </li>
+    endfor 
+    </ul>
+</body>
+</html>
